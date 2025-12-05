@@ -3,8 +3,11 @@ import { dockApps } from "#constants"; // ensure this resolves correctly
 import { Tooltip } from 'react-tooltip';
 import gsap from "gsap";
 import {useGSAP} from "@gsap/react";
+import useWindowStore from "../src/store/Window.js";
 
 const Dock = () => {
+    const { openWindow, closeWindow, windows } = useWindowStore();
+
     const dockRef = useRef(null);
     // use the same name as in JSX
      useGSAP(() => {
@@ -58,15 +61,19 @@ const Dock = () => {
     }, []);
 
     const toggleApp = (app) => {
-        console.log("toggleApp called:", app);
-        // put your open/close logic here
+        if (!app.canOpen) return;
+
+        const window = windows[app.id];
+
+        if (window.isOpen) {
+            closeWindow(app.id);
+        } else {
+            openWindow(app.id);
+        }
+
+        console.log(windows);
     };
 
-    if (!Array.isArray(dockApps)) {
-        // defensive fallback if import fails
-        console.error("dockApps is not an array:", dockApps);
-        return null;
-    }
 
     return (
         <section id="dock">
