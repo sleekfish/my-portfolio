@@ -10,7 +10,7 @@ const Dock = () => {
 
     const dockRef = useRef(null);
     // use the same name as in JSX
-     useGSAP(() => {
+    useGSAP(() => {
 
         const dock = dockRef.current;
         if (!dock) return;
