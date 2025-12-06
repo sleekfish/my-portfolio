@@ -58,4 +58,4 @@ const WindowWrapper = (Component, windowKey) => {
     return Wrapped;
 };
 
-export default WindowWrapper; 
+export default WindowWrapper;

@@ -74,7 +74,30 @@ const dockApps = [
     },
 ];
 
-
+const blogPosts = [
+    {
+        id: 1,
+        date: "Sep 2, 2025",
+        title:
+            "TypeScript Explained: What It Is, Why It Matters, and How to Master It",
+        image: "/images/blog1.png",
+        link: "https://jsmastery.com/blog/typescript-explained-what-it-is-why-it-matters-and-how-to-master-it",
+    },
+    {
+        id: 2,
+        date: "Aug 28, 2025",
+        title: "The Ultimate Guide to Mastering Three.js for 3D Development",
+        image: "/images/blog2.png",
+        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-three-js-for-3d-development",
+    },
+    {
+        id: 3,
+        date: "Aug 15, 2025",
+        title: "The Ultimate Guide to Mastering GSAP Animations",
+        image: "/images/blog3.png",
+        link: "https://jsmastery.com/blog/the-ultimate-guide-to-mastering-gsap-animations",
+    },
+];
 
 const techStack = [
     {
@@ -109,16 +132,28 @@ const socials = [
         text: "Github",
         icon: "/icons/github.svg",
         bg: "#f4656b",
-        link: "https://github.com/sleekfish",
+        link: "https://github.com/JavaScript-Mastery-Pro",
     },
-
-
     {
         id: 2,
+        text: "Platform",
+        icon: "/icons/atom.svg",
+        bg: "#4bcb63",
+        link: "https://jsmastery.com/",
+    },
+    {
+        id: 3,
+        text: "Twitter/X",
+        icon: "/icons/twitter.svg",
+        bg: "#ff866b",
+        link: "https://x.com/jsmasterypro",
+    },
+    {
+        id: 4,
         text: "LinkedIn",
         icon: "/icons/linkedin.svg",
         bg: "#05b6f6",
-        link: "https://www.linkedin.com/in/kunal-dubey-ab25b235b/",
+        link: "https://www.linkedin.com/company/javascriptmastery/posts/?feedView=all",
     },
 ];
 
@@ -173,6 +208,7 @@ export {
     navLinks,
     navIcons,
     dockApps,
+    blogPosts,
     techStack,
     socials,
     photosLinks,
@@ -189,7 +225,7 @@ const WORK_LOCATION = {
         // ▶ Project 1
         {
             id: 5,
-            name: "Gamified learning Platform",
+            name: "Nike Ecommerce Website Application",
             icon: "/images/folder.png",
             kind: "folder",
             position: "top-10 left-5", // icon position inside Finder
@@ -197,17 +233,16 @@ const WORK_LOCATION = {
             children: [
                 {
                     id: 1,
-                    name: "Gamified Platform.txt",
-                    icon: "/images/gamified.png",
+                    name: "Nike Project.txt",
+                    icon: "/images/txt.png",
                     kind: "file",
                     fileType: "txt",
                     position: "top-5 left-10",
                     description: [
-                       " This project is a modern gamified digital learning platform designed to educate school and college students in Odisha about environmental conservation and sustainable practices. The platform uses interactive games, missions, quizzes, AR/VR experiences, and reward-based learning to make environmental education engaging and enjoyable.",
-
-                        "Students earn points, badges, and EcoCoins by completing eco-friendly tasks, participating in challenges, and exploring themed learning zones like Recycling, Water Conservation, Renewable Energy, and Biodiversity. The platform also supports classroom competitions, teacher dashboards, real-time progress tracking, and AI-generated personalized learning paths.",
-
-                        "The goal is to build a future-ready, highly engaging environmental education ecosystem that promotes awareness, responsibility, and sustainable habits among the youth of Odisha."
+                        "The Nike eCommerce website is a sleek and modern platform designed for shopping the latest Nike collections.",
+                        "Instead of a simple online store, it delivers an immersive experience with bold visuals, interactive product displays, and smooth navigation.",
+                        "Think of it like walking into a flagship Nike store—but right from your phone or laptop.",
+                        "It's built with Next.js and Tailwind, ensuring fast performance, responsive design, and a clean, premium look.",
                     ],
                 },
                 {
@@ -392,7 +427,7 @@ const ABOUT_LOCATION = {
             subtitle: "Meet the Developer Behind the Code",
             image: "/images/adrian.jpg",
             description: [
-                "Hey! I’m Kunal 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
+                "Hey! I’m Adrian 👋, a web developer who enjoys building sleek, interactive websites that actually work well.",
                 "I specialize in JavaScript, React, and Next.js—and I love making things feel smooth, fast, and just a little bit delightful.",
                 "I’m big on clean UI, good UX, and writing code that doesn’t need a search party to debug.",
                 "Outside of dev work, you'll find me tweaking layouts at 2AM, sipping overpriced coffee, or impulse-buying gadgets I absolutely convinced myself I needed 😅",
@@ -415,7 +450,7 @@ const RESUME_LOCATION = {
             kind: "file",
             fileType: "pdf",
             // you can add `href` if you want to open a hosted resume
-            // href: "/your/resume/path.pdf",
+            href: "/files/resume.pdf",
         },
     ],
 };
@@ -447,6 +482,20 @@ const TRASH_LOCATION = {
         },
     ],
 };
+
+// Inside constants/index.js
+
+// ... other constants (WINDOW_CONFIG, locations, etc.)
+
+export const galleryImages = [
+    // Use the paths relative to your public directory
+    { id: 1, src: '/images/adrian.jpg', alt: 'Profile Photo 1' },
+    { id: 2, src: '/images/adrian-2.jpg', alt: 'Profile Photo 2' },
+    { id: 3, src: '/images/adrian-3.jpeg', alt: 'Profile Photo 3' },
+    { id: 4, src: '/images/blog1.png', alt: 'Project Mockup 1' },
+    { id: 5, src: '/images/blog2.png', alt: 'Project Mockup 2' },
+    // Add more images as needed...
+];
 
 export const locations = {
     work: WORK_LOCATION,
